@@ -1,6 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-console.log("Production");
 
 module.exports = {
   mode: "production",

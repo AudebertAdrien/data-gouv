@@ -1,5 +1,4 @@
 const webpack = require("webpack");
-console.log("Development");
 
 module.exports = {
   mode: "development",
