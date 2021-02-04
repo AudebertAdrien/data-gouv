@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 
 module.exports = {
+  target: "web", // fix a bug with postcss and hot reloading
   mode: "development",
   devtool: "source-map",
   plugins: [new webpack.HotModuleReplacementPlugin()],

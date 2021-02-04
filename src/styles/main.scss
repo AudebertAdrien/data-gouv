@@ -2,8 +2,9 @@ $font-size: 1rem;
 $font-color: green;
 
 html {
-  font-size: $font-size;
+  font-size: 100px;
   color: $font-color;
+  background-color: purple;
 }
 main {
   display: flex;
