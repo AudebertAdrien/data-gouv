@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   target: "browserslist", // fix a bug with postcss and hot reloading
+
   mode: "production",
   plugins: [
     new CleanWebpackPlugin(),
