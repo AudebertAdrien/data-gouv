@@ -6,6 +6,7 @@ module.exports = {
     main: path.resolve(__dirname, "./src/index.js"),
   },
   output: {
+    assetModuleFilename: "images/[hash][ext][query]",
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].bundle.js",
   },
@@ -20,6 +21,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
