@@ -3,7 +3,7 @@ const productionConfig = require("./webpack.prod.js");
 const developmentConfig = require("./webpack.dev.js");
 const { merge } = require("webpack-merge");
 
-module.exports = (env) => {
+module.exports = () => {
   if (process.env.NODE_ENV === "development") {
     return merge(commonConfig, developmentConfig);
   }
