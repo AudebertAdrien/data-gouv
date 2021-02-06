@@ -17,6 +17,7 @@ const commonConfig = {
     extensions: [".js", ".jsx"],
     alias: {
       Components: path.resolve(__dirname, "src", "components"),
+      Navigation: path.resolve(__dirname, "src", "navigation"),
     },
   },
   module: {

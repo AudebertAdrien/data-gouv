@@ -1,17 +1,14 @@
-// import { ROOT, AUTH } from "./navigation/CONSTANTS";
+import { ROOT, AUTH } from "Navigation/constants";
 import Home from "Components/Home";
-// import Auth from "./components/Auth";
+import Auth from "Components/Auth";
 
 import { Route, Switch } from "react-router-dom";
 
 function RouterConfig() {
   return (
     <Switch>
-      <Route exact path={"/"} component={Home} />
-      {/* <Route exact path={AUTH} component={Auth} />
-      <Route path="*">
-        <NotFound />
-      </Route> */}
+      <Route exact path={ROOT} component={Home} />
+      <Route exact path={AUTH} component={Auth} />
     </Switch>
   );
 }

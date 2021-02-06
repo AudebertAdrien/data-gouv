@@ -4,6 +4,7 @@
       "baseUrl": ".",
       "paths": {
         "Components/*": ["./src/components/*"],
+        "Navigation/*": ["./src/navigation/*"]
       }
     },
     "exclude": ["node_modules", "dist"]
