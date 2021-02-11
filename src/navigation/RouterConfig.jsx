@@ -7,7 +7,7 @@ import { Route, Switch } from "react-router-dom";
 function RouterConfig() {
   return (
     <Switch>
-      <Route exact path={ROOT} component={Home} />
+      {/* <Route exact path={ROOT} component={Home} /> */}
       <Route exact path={AUTH} component={Auth} />
     </Switch>
   );

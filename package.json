@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "heroku-prebuild": "npm install --dev",
     "start": "NODE_ENV=development webpack serve ",
     "build": "NODE_ENV=production webpack"
   },
@@ -34,7 +33,7 @@
     "react-router-dom": "^5.2.0"
   },
   "engines": {
-    "node": "12.20.1"
+    "node": "14.15.5"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
