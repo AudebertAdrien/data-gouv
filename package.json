@@ -1,8 +1,9 @@
 {
   "private": true,
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start": "NODE_ENV=development webpack serve ",
-    "build": "webpack.config.js"
+    "build": "NODE_ENV=production webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
