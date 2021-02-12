@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development webpack serve",
+    "start": "webpack serve",
     "build": "webpack"
   },
   "devDependencies": {

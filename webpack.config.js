@@ -4,6 +4,9 @@ const { merge } = require("webpack-merge");
 const productionConfig = require("./webpack.prod.js");
 const developmentConfig = require("./webpack.dev.js");
 
+console.log("##########");
+console.log("config.js");
+
 const commonConfig = {
   entry: {
     main: path.resolve(__dirname, "src/index.js"),
@@ -37,11 +40,16 @@ const commonConfig = {
   },
 };
 
-module.exports = () => {
-  if (process.env.NODE_ENV === "production") {
+module.exports = (env) => {
+  console.log(Object.keys(env));
+  if (Object.keys(env).includes("WEBPACK_BUILD")) {
+    console.log("##########");
+    console.log("ENV=prod");
     return merge(commonConfig, productionConfig);
   }
-  if (process.env.NODE_ENV === "development") {
+  if (Object.keys(env).includes("WEBPACK_SERVE")) {
+    console.log("##########");
+    console.log("ENV=DEv");
     return merge(commonConfig, developmentConfig);
   }
 };
