@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack --mode production",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
