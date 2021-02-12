@@ -3,7 +3,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 console.log("##########");
 console.log("prod");
 module.exports = {
@@ -17,11 +17,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html",
+      favicon: "./src/assets/fabicon.svg",
     }),
-    new FaviconsWebpackPlugin({
+    /* new FaviconsWebpackPlugin({
       logo: "./src/assets/favicon.svg",
       cache: true,
-    }),
+    }), */
   ],
   module: {
     rules: [
