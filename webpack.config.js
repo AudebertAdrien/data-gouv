@@ -38,10 +38,10 @@ const commonConfig = {
 };
 
 module.exports = () => {
-  if (process.env.NODE_ENV === "development") {
-    return merge(commonConfig, developmentConfig);
-  }
   if (process.env.NODE_ENV === "production") {
     return merge(commonConfig, productionConfig);
+  }
+  if (process.env.NODE_ENV === "development") {
+    return merge(commonConfig, developmentConfig);
   }
 };
