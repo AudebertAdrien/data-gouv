@@ -1,8 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "webpack serve",
-    "start": "node main.bundle.js",
+    "start": "webpack serve",
     "build": "webpack --mode production"
   },
   "devDependencies": {
