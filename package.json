@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "start": "npm run build",
     "build": "webpack",
     "postbuild": "webpack serve"
   },
