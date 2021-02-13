@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "postbuild": "webpack serve"
+    "start": "webpack serve",
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
