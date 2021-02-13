@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production"
+    "prebuild": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
