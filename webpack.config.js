@@ -41,13 +41,12 @@ const commonConfig = {
 };
 
 module.exports = (env) => {
-  console.log(Object.keys(env));
-  if (Object.keys(env).includes("WEBPACK_BUILD")) {
+  if (process.env.REACT_APP_PRODUCTION) {
     console.log("##########");
     console.log("ENV=prod");
     return merge(commonConfig, productionConfig);
   }
-  if (Object.keys(env).includes("WEBPACK_SERVE")) {
+  if (process.env.REACT_APP_DEVELOPMENT) {
     console.log("##########");
     console.log("ENV=DEV");
     return merge(commonConfig, developmentConfig);
