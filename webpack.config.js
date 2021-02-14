@@ -5,7 +5,7 @@ const productionConfig = require("./webpack.prod.js");
 const developmentConfig = require("./webpack.dev.js");
 
 console.log("##########");
-console.log("config.js");
+console.log("Config.js");
 
 const commonConfig = {
   entry: {
