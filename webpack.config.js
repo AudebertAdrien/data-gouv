@@ -49,7 +49,7 @@ module.exports = (env) => {
   }
   if (Object.keys(env).includes("WEBPACK_SERVE")) {
     console.log("##########");
-    console.log("ENV=DEv");
+    console.log("ENV=DEV");
     return merge(commonConfig, developmentConfig);
   }
 };
