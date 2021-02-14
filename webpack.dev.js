@@ -1,7 +1,5 @@
 const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-console.log("##########");
-console.log("Dev");
 
 module.exports = {
   // fix a bug with postcss and webpack devserver or webpack 5, browserslistrc not sent properly to production

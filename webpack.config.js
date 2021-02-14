@@ -4,9 +4,6 @@ const { merge } = require("webpack-merge");
 const productionConfig = require("./webpack.prod.js");
 const developmentConfig = require("./webpack.dev.js");
 
-console.log("##########");
-console.log("Config.js");
-
 const commonConfig = {
   entry: {
     main: path.resolve(__dirname, "src/index.js"),
@@ -40,15 +37,11 @@ const commonConfig = {
   },
 };
 
-module.exports = (env) => {
+module.exports = () => {
   if (process.env.REACT_APP_PRODUCTION) {
-    console.log("##########");
-    console.log("ENV=prod");
     return merge(commonConfig, productionConfig);
   }
   if (process.env.REACT_APP_DEVELOPMENT) {
-    console.log("##########");
-    console.log("ENV=DEV");
     return merge(commonConfig, developmentConfig);
   }
 };

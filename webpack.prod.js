@@ -4,8 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-console.log("##########");
-console.log("Prod");
+
 module.exports = {
   // fix a bug with postcss and webpack devserver or webpack 5, browserslistrc not sent properly to production
   target: "browserslist", // for .browserlistrc (maybe)
