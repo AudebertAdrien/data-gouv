@@ -1,11 +1,12 @@
-{
+/* {
     "compilerOptions": {
       "allowSyntheticDefaultImports": false,
       "baseUrl": ".",
       "paths": {
         "Components/*": ["./src/components/*"],
-        "Navigation/*": ["./src/navigation/*"]
+        "Navigation/*": ["./src/navigation/*"],
+        "Pages/*": ["./src/page/*"],
       }
     },
     "exclude": ["node_modules", "dist"]
-}
+} */
