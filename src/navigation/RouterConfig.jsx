@@ -1,4 +1,4 @@
-import { ROOT, AUTH } from "./constants";
+import { ROOT, AUTH } from "./CONSTANTS";
 import Auth from "../pages/Auth";
 import Home from "../pages/Home";
 
