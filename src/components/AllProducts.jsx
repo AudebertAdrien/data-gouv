@@ -73,7 +73,7 @@ function AllProducts() {
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Link to={`/show-product/${item._id}`}>Show</Link>
+                      <Link to={`show-product/${item._id}`}>Show</Link>
                       <DeleteProduct id={item._id} />
                     </CardActions>
                   </Card>
