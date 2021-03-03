@@ -1,7 +1,7 @@
 function Auth() {
   return (
     <div>
-      <h2>Auth.jsx</h2>
+      <h1>Auth.jsx</h1>
     </div>
   );
 }

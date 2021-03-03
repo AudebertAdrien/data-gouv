@@ -21,15 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Form() {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState(0);
-  const [selectedFiles, setSelectedFiles] = useState(undefined);
-
+function Form(props) {
+  const [name, setName] = useState(props.item.name);
+  const [description, setDescription] = useState(props.item.description);
+  const [price, setPrice] = useState(props.item.price);
+  const [selectedFiles, setSelectedFiles] = useState(props.item.imageUrl);
   const classes = useStyles();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
 
@@ -37,12 +36,19 @@ function Form() {
     formData.append("name", name);
     formData.append("description", description);
     formData.append("price", price);
-
-    return axios.post("http://localhost:3000/api/products/", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    try {
+      const response = axios.put(
+        `http://localhost:3000/api/products/${props.item._id}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const selectFile = (event) => {
@@ -63,7 +69,6 @@ function Form() {
             id="standard-required"
             label="Name"
             defaultValue={name}
-            placeholder={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
