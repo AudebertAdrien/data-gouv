@@ -19,3 +19,12 @@ module.exports = {
   ],
   plugins: plugins,
 };
+
+/* Fix =>
+ReferenceError regeneratorRuntime is not defined
+ {
+    targets: {
+      esmodules: true,     
+    },
+  },
+*/
