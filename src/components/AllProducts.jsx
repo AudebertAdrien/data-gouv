@@ -33,8 +33,7 @@ function AllProducts() {
       setIsError(false);
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/products/" ||
-            "https://my-e-commerce-server.herokuapp.com/"
+          "https://my-e-commerce-server.herokuapp.com/"
         );
         setProducts(response.data.products);
         setIsLoading(false);
