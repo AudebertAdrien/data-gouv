@@ -33,7 +33,7 @@ function AllProducts() {
       setIsError(false);
       try {
         const response = await axios.get(
-          "https://git.heroku.com/my-e-commerce-server.git"
+          "https://my-e-commerce-server.herokuapp.com/"
         );
         setProducts(response.data.products);
         setIsLoading(false);
