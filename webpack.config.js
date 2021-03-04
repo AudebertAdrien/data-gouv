@@ -15,10 +15,10 @@ const commonConfig = {
   },
   resolve: {
     extensions: [".js", ".jsx"],
-    alias: {
+    /* alias: {
       Components: path.resolve(__dirname, "src", "components"),
       Navigation: path.resolve(__dirname, "src", "navigation"),
-    },
+    }, */
   },
   module: {
     rules: [
