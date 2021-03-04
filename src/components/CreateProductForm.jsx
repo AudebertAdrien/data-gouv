@@ -38,7 +38,7 @@ function Form() {
     formData.append("description", description);
     formData.append("price", price);
 
-    return axios.post("http://localhost:3000/api/products/", formData, {
+    return axios.post(`${WEBPACK_BASE_URL}/api/products`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

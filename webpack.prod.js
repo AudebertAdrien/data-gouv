@@ -17,12 +17,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html",
-      favicon: "./src/assets/favicon.ico",
     }),
-    /* new FaviconsWebpackPlugin({
-      logo: "./src/assets/favicon.svg",
-      cache: true,
-    }), */
+    // new FaviconsWebpackPlugin({
+    //   logo: "./src/assets/favicon.svg",
+    //   cache: true,
+    // }),
     new webpack.DefinePlugin({
       WEBPACK_BASE_URL: JSON.stringify(
         "https://my-e-commerce-server.herokuapp.com"

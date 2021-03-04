@@ -38,7 +38,7 @@ function Form(props) {
     formData.append("price", price);
     try {
       const response = axios.put(
-        `http://localhost:3000/api/products/${props.item._id}`,
+        `${WEBPACK_BASE_URL}/api/products/${props.item._id}`,
         formData,
         {
           headers: {

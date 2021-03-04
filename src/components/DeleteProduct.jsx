@@ -6,7 +6,7 @@ function DeleteProduct(props) {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/products/${id}`
+        `${WEBPACK_BASE_URL}/api/products/${id}`
       );
     } catch (err) {
       console.error(err);

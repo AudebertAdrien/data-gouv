@@ -22,7 +22,7 @@ function ShowProduct() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/products/${id}`
+          `${WEBPACK_BASE_URL}/api/products/${id}`
         );
         setItem(response.data.product);
       } catch (error) {
