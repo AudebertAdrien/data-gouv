@@ -10,6 +10,9 @@ module.exports = {
   plugins: [
     // new ReactRefreshWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      WEBPACK_BASE_URL: JSON.stringify("http://localhost:3000"),
+    }),
   ],
   devServer: {
     contentBase: "./dist",

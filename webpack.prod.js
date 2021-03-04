@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -22,6 +23,11 @@ module.exports = {
       logo: "./src/assets/favicon.svg",
       cache: true,
     }), */
+    new webpack.DefinePlugin({
+      WEBPACK_BASE_URL: JSON.stringify(
+        "https://my-e-commerce-server.herokuapp.com"
+      ),
+    }),
   ],
   module: {
     rules: [

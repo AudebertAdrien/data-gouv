@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { PROD, LOCAL } from "../constants";
 
 import DeleteProduct from "./DeleteProduct";
 
@@ -32,9 +31,7 @@ function AllProducts() {
       setIsLoading(true);
       setIsError(false);
       try {
-        const response = await axios.get(
-          "https://my-e-commerce-server.herokuapp.com/api/products"
-        );
+        const response = await axios.get(`${WEBPACK_BASE_URL}/api/products`);
         setProducts(response.data.products);
         setIsLoading(false);
       } catch (error) {
