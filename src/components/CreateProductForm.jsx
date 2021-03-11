@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ReferenceDataContext from "./ReferenceDataContext";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -26,10 +27,11 @@ function Form() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
   const [selectedFiles, setSelectedFiles] = useState(undefined);
+  const { products, setProducts } = useContext(ReferenceDataContext);
 
   const classes = useStyles();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
 
@@ -38,11 +40,12 @@ function Form() {
     formData.append("description", description);
     formData.append("price", price);
 
-    return axios.post(`${WEBPACK_BASE_URL}/api/products`, formData, {
+    const res = await axios.post(`${WEBPACK_BASE_URL}/api/products`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
     });
+    setProducts([...products, res.data.product]);
   };
 
   const selectFile = (event) => {

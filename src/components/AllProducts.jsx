@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ReferenceDataContext from "./ReferenceDataContext";
 
 import DeleteProduct from "./DeleteProduct";
 
@@ -13,6 +14,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
 import { makeStyles } from "@material-ui/core/styles";
+
 const useStyles = makeStyles((theme) => ({
   media: {
     height: 140,
@@ -20,13 +22,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AllProducts() {
-  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-
+  const { products, setProducts } = useContext(ReferenceDataContext);
   const classes = useStyles();
 
+  console.log("All products");
   useEffect(() => {
+    console.log("useEffect");
     const fetchData = async () => {
       setIsLoading(true);
       setIsError(false);

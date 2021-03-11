@@ -1,7 +1,7 @@
 import { ROOT, AUTH, SHOW_ITEM } from "../constants";
 
-import Auth from "../pages/Auth";
 import Home from "../pages/Home";
+import Auth from "../pages/Auth";
 
 import ShowProduct from "../components/ShowProduct";
 
@@ -12,6 +12,8 @@ function RouterConfig() {
     <Switch>
       <Route exact path={ROOT} component={Home} />
       <Route exact path={AUTH} component={Auth} />
+      {/* <Route exact path={PROFILE} component={Profile} /> */}
+
       <Route path={SHOW_ITEM} component={ShowProduct} />
     </Switch>
   );
