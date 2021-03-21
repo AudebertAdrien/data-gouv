@@ -1,5 +1,3 @@
-import { ROOT, AUTH, SHOW_ITEM } from "../constants";
-
 import Home from "../pages/Home";
 import Auth from "../pages/Auth";
 
@@ -10,11 +8,10 @@ import { Route, Switch } from "react-router-dom";
 function RouterConfig() {
   return (
     <Switch>
-      <Route exact path={ROOT} component={Home} />
-      <Route exact path={AUTH} component={Auth} />
-      {/* <Route exact path={PROFILE} component={Profile} /> */}
-
-      <Route path={SHOW_ITEM} component={ShowProduct} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/auth" component={Auth} />
+      <Route exact path="/show-product/:id" component={ShowProduct} />
+      <Route path="*" render={() => <h1>404: page not found</h1>} />
     </Switch>
   );
 }

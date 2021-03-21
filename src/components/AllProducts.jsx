@@ -27,9 +27,7 @@ function AllProducts() {
   const { products, setProducts } = useContext(ReferenceDataContext);
   const classes = useStyles();
 
-  console.log("All products");
   useEffect(() => {
-    console.log("useEffect");
     const fetchData = async () => {
       setIsLoading(true);
       setIsError(false);

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -26,6 +27,8 @@ function Form(props) {
   const [description, setDescription] = useState(props.item.description);
   const [price, setPrice] = useState(props.item.price);
   const [selectedFiles, setSelectedFiles] = useState(props.item.imageUrl);
+  const history = useHistory();
+
   const classes = useStyles();
 
   const handleSubmit = async (e) => {
@@ -37,7 +40,7 @@ function Form(props) {
     formData.append("description", description);
     formData.append("price", price);
     try {
-      const response = axios.put(
+      const response = await axios.put(
         `${WEBPACK_BASE_URL}/api/products/${props.item._id}`,
         formData,
         {
@@ -49,6 +52,7 @@ function Form(props) {
     } catch (err) {
       console.error(err);
     }
+    history.push("/");
   };
 
   const selectFile = (event) => {
@@ -57,6 +61,7 @@ function Form(props) {
 
   return (
     <>
+      <h3>update</h3>
       <form
         onSubmit={handleSubmit}
         className={classes.root}

@@ -32,8 +32,7 @@ function ShowProduct() {
     fetchData();
   }, []);
 
-  const handleModification = (e) => {
-    console.log(e);
+  const handleModification = () => {
     setShowForm(true);
   };
 
@@ -45,7 +44,7 @@ function ShowProduct() {
         </div>
       ) : (
         <div>
-          <h1>Show product</h1>
+          <h1>Show product!!!</h1>
           <div>
             <h3>{item.name}</h3>
           </div>

@@ -1,7 +1,8 @@
-import CreateProductForm from "../components/CreateProductForm";
-import AllProduct from "../components/AllProducts";
-import ReferenceDataContext from "../components/ReferenceDataContext";
 import { useState } from "react";
+import ReferenceDataContext from "../components/ReferenceDataContext";
+
+import AllProduct from "../components/AllProducts";
+import CreateProductForm from "../components/CreateProductForm";
 
 function Home() {
   const [products, setProducts] = useState([]);
