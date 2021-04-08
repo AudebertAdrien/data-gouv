@@ -1,20 +1,15 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import RouterConfig from "./navigation/RouterConfig";
 
-import Container from "@material-ui/core/Container";
-import Navbar from "./components/Navbar";
 import LinkPages from "./components/LinkPages";
 
 function App() {
   return (
-    <Container maxWidth="md">
-      <Router>
-        <Navbar />
-        <LinkPages />
+    <Router>
+      <LinkPages />
 
-        <RouterConfig />
-      </Router>
-    </Container>
+      <RouterConfig />
+    </Router>
   );
 }
 

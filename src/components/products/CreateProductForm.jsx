@@ -1,26 +1,6 @@
 import axios from "axios";
 import { useState, useContext } from "react";
-import ReferenceDataContext from "./ReferenceDataContext";
-
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import Icon from "@material-ui/core/Icon";
-
-import { makeStyles } from "@material-ui/core/styles";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-  input: {
-    display: "none",
-  },
-}));
+import ReferenceDataContext from "../ReferenceDataContext";
 
 function Form() {
   const [name, setName] = useState("");
@@ -28,8 +8,6 @@ function Form() {
   const [price, setPrice] = useState(0);
   const [selectedFiles, setSelectedFiles] = useState(undefined);
   const { products, setProducts } = useContext(ReferenceDataContext);
-
-  const classes = useStyles();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,67 +31,39 @@ function Form() {
   };
 
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
-        className={classes.root}
-        noValidate
-        autoComplete="off"
-      >
+    <div>
+      <form onSubmit={handleSubmit}>
         <div>
-          <TextField
-            required
-            id="standard-required"
-            label="Name"
+          <input
             defaultValue={name}
-            placeholder={name}
+            placeholder="name"
             onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div>
-          <TextField
-            required
-            id="standard-required"
-            label="Description"
+          <input
             defaultValue={description}
+            placeholder="description"
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
         <div>
-          <TextField
-            required
-            id="standard-required"
-            label="Price"
+          <input
             defaultValue={price}
+            placeholder="price"
             onChange={(e) => setPrice(e.target.value)}
           />
         </div>
-
-        <label htmlFor="contained-button-file">
-          <Button variant="contained" color="primary" component="span">
-            Upload
-          </Button>
-        </label>
         <input
           accept="image/*"
-          className={classes.input}
           id="contained-button-file"
           multiple
           type="file"
           onChange={selectFile}
         />
-
-        <Button
-          variant="contained"
-          color="primary"
-          className={classes.button}
-          endIcon={<Icon>send</Icon>}
-          type="submit"
-        >
-          Submit
-        </Button>
+        <button type="submit">Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 

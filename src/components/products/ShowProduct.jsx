@@ -2,21 +2,12 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import UpdateProductForm from "./UpdateProductForm.jsx";
-
-import { makeStyles } from "@material-ui/core/styles";
-const useStyles = makeStyles((theme) => ({
-  media: {
-    height: 140,
-  },
-}));
+import UpdateProductForm from "../UpdateProductForm.jsx";
 
 function ShowProduct() {
   const [item, setItem] = useState({});
   const { id } = useParams();
   const [showForm, setShowForm] = useState(false);
-
-  const classes = useStyles();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,11 +43,7 @@ function ShowProduct() {
             <p>{item.description}</p>
           </div>
           <div>
-            <img
-              className={classes.media}
-              src={item.imageUrl}
-              alt={item.name}
-            />
+            <img className="image" src={item.imageUrl} alt={item.name} />
           </div>
           <button onClick={handleModification}>Modify</button>
         </div>

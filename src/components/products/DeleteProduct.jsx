@@ -1,9 +1,6 @@
 import { useContext } from "react";
 import axios from "axios";
-import ReferenceDataContext from "./ReferenceDataContext";
-
-import DeleteIcon from "@material-ui/icons/Delete";
-import Button from "@material-ui/core/Button";
+import ReferenceDataContext from "../ReferenceDataContext";
 
 function DeleteProduct(props) {
   const { products, setProducts } = useContext(ReferenceDataContext);
@@ -21,14 +18,7 @@ function DeleteProduct(props) {
 
   return (
     <div>
-      <Button
-        variant="contained"
-        color="secondary"
-        startIcon={<DeleteIcon />}
-        onClick={() => handleDelete(props)}
-      >
-        Delete
-      </Button>
+      <button onClick={() => handleDelete(props)}>Delete</button>
     </div>
   );
 }

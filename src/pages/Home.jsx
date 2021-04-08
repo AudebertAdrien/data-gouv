@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ReferenceDataContext from "../components/ReferenceDataContext";
 
-import AllProduct from "../components/AllProducts";
-import CreateProductForm from "../components/CreateProductForm";
+import AllProduct from "../components/products/AllProducts";
+import CreateProductForm from "../components/products/CreateProductForm";
 
 function Home() {
   const [products, setProducts] = useState([]);

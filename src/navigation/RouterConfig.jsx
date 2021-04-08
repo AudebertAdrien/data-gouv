@@ -1,7 +1,7 @@
 import Home from "../pages/Home";
 import Auth from "../pages/Auth";
 
-import ShowProduct from "../components/ShowProduct";
+import ShowProduct from "../components/products/ShowProduct";
 
 import { Route, Switch } from "react-router-dom";
 
