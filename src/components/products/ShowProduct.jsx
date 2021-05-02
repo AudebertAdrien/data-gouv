@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import UpdateProductForm from "../UpdateProductForm.jsx";
+import UpdateProductForm from "./UpdateProductForm.jsx";
 
 function ShowProduct() {
   const [item, setItem] = useState({});

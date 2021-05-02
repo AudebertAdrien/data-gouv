@@ -24,7 +24,6 @@ function AuthForm() {
   return (
     <div>
       <div>
-        <h1>Formular</h1>
         <button id="signIn" onClick={toggleModal}>
           SignIn
         </button>
