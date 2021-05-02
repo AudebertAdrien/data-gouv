@@ -1,10 +1,14 @@
 import AuthForm from "../components/Log/index";
+import LinkPages from "../components/LinkPages";
 
 function Auth() {
   return (
     <div>
-      <h1>AuthPage</h1>
-      <AuthForm />
+      <LinkPages />
+      <h1>Auth Page</h1>
+      <div>
+        <AuthForm />
+      </div>
     </div>
   );
 }
