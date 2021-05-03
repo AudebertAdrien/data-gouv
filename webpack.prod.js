@@ -18,7 +18,7 @@ module.exports = {
       filename: "index.html",
     }),
     new FaviconsWebpackPlugin({
-      logo: "./src/assets/img/icon.png",
+      logo: "./src/assets/favicon.svg",
       cache: true,
     }),
     new webpack.DefinePlugin({
