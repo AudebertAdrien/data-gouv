@@ -14,3 +14,7 @@ To solve this so the runtime can locate the bundle, set the custom bundle path:
 $ heroku config:set JS_RUNTIME_TARGET_BUNDLE = ./dist/\*.js
 
 - The static.json file is required to use this buildpack. This file handles all the configuration described below.
+
+### Carte de france interactive
+
+https://github.com/SocialGouv/react-departements

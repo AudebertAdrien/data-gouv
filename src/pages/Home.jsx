@@ -1,4 +1,5 @@
 import axios from "axios";
+import France from "@socialgouv/react-departements";
 
 function Home() {
   axios
@@ -12,6 +13,7 @@ function Home() {
   return (
     <>
       <div>Home</div>
+      <France departements={[33]} />;
     </>
   );
 }
