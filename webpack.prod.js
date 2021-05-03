@@ -4,11 +4,10 @@ const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
-  // fix a bug with postcss and webpack devserver or webpack 5, browserslistrc not sent properly to production
-  target: "browserslist", // for .browserlistrc (maybe)
+  target: "browserslist",
 
   mode: "production",
   plugins: [
@@ -18,10 +17,10 @@ module.exports = {
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html",
     }),
-    new FaviconsWebpackPlugin({
+    /* new FaviconsWebpackPlugin({
       logo: "./src/assets/img/icon.png",
       cache: true,
-    }),
+    }), */
     new webpack.DefinePlugin({
       WEBPACK_BASE_URL: JSON.stringify(
         "https://my-e-commerce-server.herokuapp.com"

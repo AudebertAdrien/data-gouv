@@ -1,14 +1,11 @@
 const webpack = require("webpack");
-// const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
-  // fix a bug with postcss and webpack devserver or webpack 5, browserslistrc not sent properly to production
   target: "web",
 
   mode: "development",
   devtool: "source-map",
   plugins: [
-    // new ReactRefreshWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       WEBPACK_BASE_URL: JSON.stringify("http://localhost:3000"),
