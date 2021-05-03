@@ -1,5 +1,19 @@
+import axios from "axios";
+
 function Home() {
-  return <div>Home</div>;
+  axios
+    .get("http://localhost:3000/")
+    .then((response) => {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  return (
+    <>
+      <div>Home</div>
+    </>
+  );
 }
 
 export default Home;
