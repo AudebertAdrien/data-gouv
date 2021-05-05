@@ -3,7 +3,7 @@ import France from "@socialgouv/react-departements";
 
 function Home() {
   axios
-    .get("http://localhost:3000/")
+    .get("https://data-gouv-server.herokuapp.com/" | "http://localhost:3000/")
     .then((response) => {
       console.log(response);
     })
