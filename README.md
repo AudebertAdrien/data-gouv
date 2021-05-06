@@ -1,5 +1,8 @@
 # Data-Gouv-client
 
+https://github.com/AudebertAdrien/data-gouv-client
+https://data-gouv-client.herokuapp.com/
+
 ### heroku beau merdier
 
 - Bundle customized :

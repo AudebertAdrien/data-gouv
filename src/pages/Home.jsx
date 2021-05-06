@@ -1,6 +1,7 @@
 import axios from "axios";
-import France from "@socialgouv/react-departements";
 import { useState, useEffect } from "react";
+
+import FranceDepartements from "./FranceDepartements";
 
 function Home() {
   const [incidenceData, setIncidenceData] = useState([]);
@@ -15,11 +16,10 @@ function Home() {
       });
   }, []);
 
-  console.log(incidenceData);
   return (
     <>
       <div>Home</div>
-      <France departements={[33]} />
+      <FranceDepartements incidenceData={incidenceData} />
       <div>
         {incidenceData &&
           incidenceData.map((item) => {
