@@ -1,10 +1,9 @@
 import France from "@socialgouv/react-departements";
 
-function FranceDepartements({ incidenceData }) {
-  console.log(incidenceData);
+function FranceDepartements() {
   return (
     <div>
-      <France departements={[33, 66]} />
+      <France departements={[92, 93]} color={"red"} highlightColor={"blue"} />
     </div>
   );
 }

@@ -4,12 +4,15 @@ import { useState, useEffect } from "react";
 import FranceDepartements from "./FranceDepartements";
 
 function Home() {
-  const [incidenceData, setIncidenceData] = useState([]);
+  const [dataCovid19, setdataCovid19] = useState([]);
+
+  console.log(dataCovid19);
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/")
       .then((res) => {
-        setIncidenceData(res.data);
+        setdataCovid19(res.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -19,13 +22,7 @@ function Home() {
   return (
     <>
       <div>Home</div>
-      <FranceDepartements incidenceData={incidenceData} />
-      <div>
-        {incidenceData &&
-          incidenceData.map((item) => {
-            return <p key={item._id}>{item._id}</p>;
-          })}
-      </div>
+      <FranceDepartements dataCovid19={dataCovid19} />
     </>
   );
 }
