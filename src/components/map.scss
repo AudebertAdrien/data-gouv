@@ -1,0 +1,24 @@
+.map__image {
+  width: 100%;
+  & path {
+    width: 100%;
+    fill: #d9d9d9;
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+.map__image a {
+  .heat1 {
+    fill: #ea9999;
+  }
+
+  .heat2 {
+    fill: #cc0000;
+  }
+
+  .heat3 {
+    fill: #990000;
+  }
+}

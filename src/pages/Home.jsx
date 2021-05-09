@@ -1,16 +1,18 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import FranceDepartements from "./FranceDepartements";
+import FranceRegion from "../components/FranceDepartments";
 
 function Home() {
   const [dataCovid19, setdataCovid19] = useState([]);
 
-  console.log(dataCovid19);
+  //https://data-gouv-server.herokuapp.com/
+  //or
+  //http://localhost:3000/
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/")
+      .get(WEBPACK_BASE_URL)
       .then((res) => {
         setdataCovid19(res.data);
       })
@@ -21,12 +23,9 @@ function Home() {
 
   return (
     <>
-      <div>Home</div>
-      <FranceDepartements dataCovid19={dataCovid19} />
+      <FranceRegion dataCovid19={dataCovid19} />
     </>
   );
 }
 
 export default Home;
-//https://data-gouv-server.herokuapp.com/
-//http://localhost:3000/
