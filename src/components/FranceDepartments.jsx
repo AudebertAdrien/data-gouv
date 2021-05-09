@@ -7,7 +7,7 @@ function FranceRegion({ dataCovid19 }) {
       let doc = dataCovid19[i];
       const region = Object.keys(doc)[0];
       const incidence = Object.values(doc)[0];
-
+      console.log(doc);
       // return a new className
       if (region === num) {
         if (incidence < 1) {
