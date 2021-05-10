@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import FranceRegion from "../components/FranceDepartments";
 
 function Home() {
-  const [dataCovid19, setdataCovid19] = useState([]);
-
+  // const [dataCovid19, setdataCovid19] = useState([]);
+  console.log("home");
   //https://data-gouv-server.herokuapp.com/
   //or
   //http://localhost:3000/
-  useEffect(() => {
+  /* useEffect(() => {
     axios
       .get(WEBPACK_BASE_URL)
       .then((res) => {
@@ -18,11 +18,11 @@ function Home() {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, []); */
 
   return (
     <>
-      <FranceRegion dataCovid19={dataCovid19} />
+      <FranceRegion /* dataCovid19={dataCovid19} */ />
     </>
   );
 }
