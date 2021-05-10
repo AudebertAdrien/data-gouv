@@ -10,9 +10,14 @@ function Home() {
   //or
   //http://localhost:3000/
   useEffect(() => {
-    axios.get(WEBPACK_BASE_URL).then((res) => {
-      setdataCovid19(res.data);
-    });
+    axios
+      .get(WEBPACK_BASE_URL)
+      .then((res) => {
+        setdataCovid19(res.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }, []);
 
   return (
