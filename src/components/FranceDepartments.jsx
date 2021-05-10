@@ -3,7 +3,7 @@ import "./map.scss";
 
 function FranceRegion({ dataCovid19 }) {
   console.log("franceRegion");
-  console.log(dataCovid19);
+  // console.log(dataCovid19);
   /* function attrColor(num) {
     function defineColor(obj) {
       const region = Object.keys(obj)[0];
