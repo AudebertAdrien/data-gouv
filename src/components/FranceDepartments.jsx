@@ -3,14 +3,11 @@ import "./map.scss";
 
 function FranceRegion({ dataCovid19 }) {
   console.log("fc franceRegion");
+
   function attrColor(num) {
-    console.log("fc attrColor");
-    for (let i = 0; i < dataCovid19.length; i++) {
-      let doc = dataCovid19[i];
-      const region = Object.keys(doc)[0];
-      const incidence = Object.values(doc)[0];
-      console.log("loop for");
-      // return a new className
+    function defineColor(obj) {
+      const region = Object.keys(obj)[0];
+      const incidence = Object.values(obj)[0];
       if (region === num) {
         if (incidence < 1) {
           return "heat1";
@@ -21,6 +18,19 @@ function FranceRegion({ dataCovid19 }) {
         if (incidence >= 2 && incidence <= 3) {
           return "heart3";
         }
+      }
+    }
+
+    if (num === "2A" || num === "2B") {
+      if (num === "2A") defineColor(18);
+      if (num === "2B") defineColor(19);
+    } else {
+      let obj = dataCovid19[num - 2];
+      console.log(obj);
+      if (!(typeof obj === "undefined" || obj === null)) {
+        return defineColor(obj);
+      } else {
+        console.log("undefined");
       }
     }
   }
