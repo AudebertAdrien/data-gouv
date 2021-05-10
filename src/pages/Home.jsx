@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import FranceRegion from "../components/FranceDepartments";
 
 function Home() {
-  // const [dataCovid19, setdataCovid19] = useState([]);
+  const [dataCovid19, setdataCovid19] = useState([]);
   console.log("home");
   //https://data-gouv-server.herokuapp.com/
   //or
@@ -14,7 +14,7 @@ function Home() {
       .get(WEBPACK_BASE_URL)
       .then((res) => {
         console.log(res);
-        // setdataCovid19(res.data);
+        setdataCovid19(res.data);
       })
       .catch(function (error) {
         console.log(error);
