@@ -23,7 +23,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       WEBPACK_BASE_URL: JSON.stringify(
-        "https://data-gouv-client.herokuapp.com/"
+        "https://data-gouv-server.herokuapp.com/"
       ),
     }),
   ],
