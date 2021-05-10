@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <>
-      <FranceRegion /* dataCovid19={dataCovid19} */ />
+      <FranceRegion dataCovid19={dataCovid19} />
     </>
   );
 }
