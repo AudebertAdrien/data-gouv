@@ -9,16 +9,10 @@ function Home() {
   //https://data-gouv-server.herokuapp.com/
   //or
   //http://localhost:3000/
-  console.log(WEBPACK_BASE_URL + "#####");
   useEffect(() => {
-    axios
-      .get(WEBPACK_BASE_URL)
-      .then((res) => {
-        setdataCovid19(res.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    axios.get(WEBPACK_BASE_URL).then((res) => {
+      setdataCovid19(res.data);
+    });
   }, []);
 
   return (
