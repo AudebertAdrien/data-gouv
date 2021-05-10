@@ -26,7 +26,6 @@ function FranceRegion({ dataCovid19 }) {
       if (num === "2B") defineColor(19);
     } else {
       let obj = dataCovid19[num - 2];
-      console.log(obj);
       if (!(typeof obj === "undefined" || obj === null)) {
         return defineColor(obj);
       } else {
