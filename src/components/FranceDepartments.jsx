@@ -2,7 +2,6 @@ import React from "react";
 import "./map.scss";
 
 function FranceRegion({ dataCovid19 }) {
-  console.log("franceRegion");
   function attrColor(num) {
     function defineColor(obj) {
       const region = Object.keys(obj)[0];

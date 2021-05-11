@@ -5,7 +5,6 @@ import FranceRegion from "../components/FranceDepartments";
 
 function Home() {
   const [dataCovid19, setdataCovid19] = useState([]);
-  console.log("home");
   //https://data-gouv-server.herokuapp.com/
   //or
   //http://localhost:3000/
