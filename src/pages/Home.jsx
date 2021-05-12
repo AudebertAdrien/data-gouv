@@ -12,7 +12,6 @@ function Home() {
     axios
       .get(WEBPACK_BASE_URL)
       .then((res) => {
-        console.log(res);
         setdataCovid19(res.data);
       })
       .catch(function (error) {
