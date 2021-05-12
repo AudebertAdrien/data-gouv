@@ -37,7 +37,7 @@ function FranceRegion({ dataCovid19 }) {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 612 585"
         >
-          <a xlinkHref="#" xlinkTitle={`Ain${" : " + 3}`}>
+          <a xlinkHref="#" xlinkTitle={"Ain"}>
             <path
               id="1"
               className={attrClass("1")}
