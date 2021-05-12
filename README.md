@@ -2,9 +2,12 @@
 
 ---
 
-https://github.com/AudebertAdrien/data-gouv-client
+## Description
 
-https://data-gouv-client.herokuapp.com/
+- Production link
+  https://data-gouv-client.herokuapp.com/
+- Github link
+  https://github.com/AudebertAdrien/data-gouv-client
 
 ### Heroku
 
@@ -48,6 +51,8 @@ https://data-gouv-client.herokuapp.com/
   - babel-jest
 - jest
 
-""node-sass": "^5.0.0","
+```
+"node-sass": "^5.0.0","
 "react-refresh": "^0.9.0",
 "react-test-renderer": "^17.0.1",
+```
