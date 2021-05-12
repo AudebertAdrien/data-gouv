@@ -15,10 +15,19 @@
   }
 
   .heat2 {
-    fill: #cc0000;
+    fill: #df0000;
   }
 
   .heat3 {
-    fill: #990000;
+    fill: #770404;
   }
 }
+
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+}
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,9 +1,10 @@
 # Data-Gouv-client
 
 https://github.com/AudebertAdrien/data-gouv-client
+
 https://data-gouv-client.herokuapp.com/
 
-### heroku beau merdier
+### Heroku - Beau merdier
 
 - Bundle customized :
   https://github.com/mars/create-react-app-buildpack
