@@ -13,10 +13,11 @@ function FranceRegion({ dataCovid19 }) {
           return "heat2";
         }
         if (incidence >= 30) {
-          return "heart3";
+          return "heat3";
         }
       }
     }
+
     // exeption Corsica
     if (num === "2A" || num === "2B") {
       if (num === "2A") defineClassColor(18);

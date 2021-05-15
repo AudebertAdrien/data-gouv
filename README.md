@@ -74,3 +74,7 @@
   - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
   - [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
   - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
+- [DatePicker](https://github.com/Hacker0x01/react-datepicker)  
+  A simple and reusable Datepicker component for React
+  - [date-fns](https://date-fns.org/)  
+    Simple and consistent toolset for manipulating dates
