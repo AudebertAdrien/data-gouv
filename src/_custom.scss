@@ -1,3 +1,16 @@
+@mixin color-list {
+  .heat1 {
+    fill: #ea9999;
+  }
+
+  .heat2 {
+    fill: #c40000;
+  }
+
+  .heat3 {
+    fill: #770404;
+  }
+}
 .map__image {
   width: 100%;
   & path {
@@ -10,16 +23,21 @@
   }
 }
 .map__image a {
-  .heat1 {
-    fill: #ea9999;
-  }
+  @include color-list();
+}
 
-  .heat2 {
-    fill: #df0000;
+.list-group {
+  .incidence0 {
+    background-color: #d9d9d9;
   }
-
-  .heat3 {
-    fill: #770404;
+  .incidence1 {
+    background-color: #ea9999;
+  }
+  .incidence2 {
+    background-color: #c40000;
+  }
+  .incidence3 {
+    background-color: #770404;
   }
 }
 

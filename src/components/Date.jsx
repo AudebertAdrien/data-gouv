@@ -34,6 +34,7 @@ function DateChange({ setDataCovid19 }) {
       dateFormat="dd/MM/yyyy"
       selected={startDate}
       onChange={handleDateChange}
+      inline
     />
   );
 }
