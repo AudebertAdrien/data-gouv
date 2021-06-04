@@ -21,7 +21,6 @@ function DateChange({ setDataCovid19 }) {
         headers: { "content-type": "text/plain; charset=UTF-8" },
       })
       .then((res) => {
-        console.log(res);
         setDataCovid19(res.data);
       })
       .catch(function (error) {
