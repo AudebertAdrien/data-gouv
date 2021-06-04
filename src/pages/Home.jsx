@@ -45,16 +45,15 @@ function Home() {
         </div>
         <div className="col-sm-6">
           <ul className="list-group">
-            <li className="list-group-item incidence0">Incidence equal to 0</li>
+            <li className="list-group-item incidence0">Incidence close to 0</li>
             <li className="list-group-item incidence1">
-              Incidence less than 15
+              Incidence less than 15%
             </li>
             <li className="list-group-item incidence2">
-              Incidence greater or equal to 15 &amp;&amp; Incidence less or
-              equal to 30
+              Incidence between 15% and 30%
             </li>
             <li className="list-group-item incidence3">
-              Incidence greater or equal to 30
+              Incidence greater or equal to 30 %
             </li>
           </ul>
         </div>
