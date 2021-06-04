@@ -4,23 +4,27 @@ import { useState, useEffect } from "react";
 import FranceDepartment from "../components/FranceDepartments";
 import DateChange from "../components/Date";
 
-// import { format } from "date-fns";
+import { format } from "date-fns";
+// let newDateFormat = format(new Date(), `yyyy-dd-MM`);
 
 function Home() {
   const [dataCovid19, setDataCovid19] = useState([]);
   /* WEBPACK_BASE_URL is a global variable created at compile time by webpack 
   https://data-gouv-server.herokuapp.com/ or http://localhost:3000/
   */
-
-  // let newDateFormat = format(new Date(), `yyyy-dd-MM`);
-  let newDateFormat = "2021-04-30";
+  let today = new Date();
+  let lastWeek = format(
+    new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7),
+    `yyyy-MM-dd`
+  );
 
   useEffect(() => {
     axios
-      .post(WEBPACK_BASE_URL, newDateFormat, {
+      .post(WEBPACK_BASE_URL, lastWeek, {
         headers: { "content-type": "text/plain; charset=UTF-8" },
       })
       .then((res) => {
+        console.log(res.data);
         setDataCovid19(res.data);
       })
       .catch(function (error) {
@@ -32,6 +36,9 @@ function Home() {
     <div className="container">
       <div className="row">
         <FranceDepartment dataCovid19={dataCovid19} />
+      </div>
+      <div className="row justify-content-center my-4">
+        Lasted known data on the date of the {lastWeek}
       </div>
       <div className="row">
         <div className="col-sm-6 d-flex justify-content-center">
