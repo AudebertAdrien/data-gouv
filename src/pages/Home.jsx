@@ -24,7 +24,6 @@ function Home() {
         headers: { "content-type": "text/plain; charset=UTF-8" },
       })
       .then((res) => {
-        console.log(res.data);
         setDataCovid19(res.data);
       })
       .catch(function (error) {
