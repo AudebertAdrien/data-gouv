@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      WEBPACK_BASE_URL: JSON.stringify("http://localhost:3000"),
+      WEBPACK_BASE_URL: JSON.stringify("http://localhost:5000"),
     }),
   ],
   devServer: {
