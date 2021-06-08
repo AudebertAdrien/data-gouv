@@ -14,7 +14,6 @@ function DateChange({ setDataCovid19 }) {
   const [startDate, setStartDate] = useState(date.setDate(date.getDate() - 7));
 
   function handleDateChange(date) {
-    console.log(date);
     let newDateFormat = format(new Date(date), `yyyy-MM-dd`);
     axios
       .post(WEBPACK_BASE_URL, newDateFormat, {

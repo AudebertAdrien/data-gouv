@@ -36,8 +36,11 @@ function Home() {
       <div className="row">
         <FranceDepartment dataCovid19={dataCovid19} />
       </div>
-      <div className="row justify-content-center my-4">
-        Lasted known data on the date of the {lastWeek}
+      <div className="row my-4">
+        <p className="text-center">
+          Lasted known data on the date of the{" "}
+          <span className="lastWeekMessage">{lastWeek}</span>
+        </p>
       </div>
       <div className="row">
         <div className="col-sm-6 d-flex justify-content-center">
