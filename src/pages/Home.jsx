@@ -38,7 +38,7 @@ function Home() {
       </div>
       <div className="row my-4">
         <p className="text-center">
-          Lasted known data on the date of the{" "}
+          Lastest data known on{" "}
           <span className="lastWeekMessage">{lastWeek}</span>
         </p>
       </div>
