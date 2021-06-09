@@ -54,6 +54,12 @@
   font-weight: bold;
 }
 
+@include media-breakpoint-up(lg) {
+  .container {
+    width: 48%;
+  }
+}
+
 html,
 body,
 #root,
