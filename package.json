@@ -2,8 +2,7 @@
   "private": true,
   "scripts": {
     "start": "REACT_APP_DEVELOPMENT=development webpack serve",
-    "build": "REACT_APP_PRODUCTION=production webpack",
-    "test": "jest --watch"
+    "build": "REACT_APP_PRODUCTION=production webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
