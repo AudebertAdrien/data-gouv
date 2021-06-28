@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 import FranceDepartment from "../components/FranceDepartments";
 import DateChange from "../components/Date";
-
 import { format } from "date-fns";
 // let newDateFormat = format(new Date(), `yyyy-dd-MM`);
 
