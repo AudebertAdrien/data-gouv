@@ -13,7 +13,7 @@ function Home() {
   */
   let today = new Date();
   let lastWeek = format(
-    new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7),
+    new Date(today.getFullYear(), today.getMonth(), today.getDate() - 8),
     `yyyy-MM-dd`
   );
 

@@ -1,9 +1,13 @@
 {
   "private": true,
-  "name": "Data-Gouv",
+  "name": "data-gouv",
   "description": "Map and Incidence Covid 19",
   "author": "Adrien Audebert",
   "license": "MIT",
+  "engines":{
+    "node": "16.4.0",
+    "npm": "7.18.1"
+  },
   "scripts": {
     "start": "REACT_APP_DEVELOPMENT=development webpack serve",
     "build": "REACT_APP_PRODUCTION=production webpack"
