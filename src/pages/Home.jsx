@@ -12,10 +12,11 @@ function Home() {
   https://data-gouv-server.herokuapp.com/ or http://localhost:3000/
   */
   let today = new Date();
-  let lastWeek = format(
+  /* let lastWeek = format(
     new Date(today.getFullYear(), today.getMonth(), today.getDate() - 8),
     `yyyy-MM-dd`
-  );
+  ); */
+  let lastWeek = format(new Date("2021", "06", "01"), `yyyy-MM-dd`);
 
   useEffect(() => {
     axios
@@ -37,8 +38,8 @@ function Home() {
       </div>
       <div className="row my-4">
         <p className="text-center">
-          Lastest data known on{" "}
-          <span className="lastWeekMessage">{lastWeek}</span>
+          From <span className="lastWeekMessage">{lastWeek}</span> the map isn't
+          updated anymore !!!
         </p>
       </div>
       <div className="row">

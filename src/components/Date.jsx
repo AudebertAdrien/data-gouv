@@ -10,8 +10,8 @@ registerLocale("fr", fr);
 import { format } from "date-fns";
 
 function DateChange({ setDataCovid19 }) {
-  const date = new Date();
-  const [startDate, setStartDate] = useState(date.setDate(date.getDate() - 7));
+  const date = new Date("2021", "06", "01");
+  const [startDate, setStartDate] = useState(date);
 
   function handleDateChange(date) {
     let newDateFormat = format(new Date(date), `yyyy-MM-dd`);
