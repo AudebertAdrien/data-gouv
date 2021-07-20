@@ -2,15 +2,20 @@
 
 @mixin color-list {
   .heat1 {
-    fill: #ea9999;
+    fill: #10d81a;
   }
 
   .heat2 {
-    fill: #c40000;
+    fill: #e7eb0f;
   }
-
   .heat3 {
-    fill: #770404;
+    fill: #19aedb;
+  }
+  .heat4 {
+    fill: #ffae00;
+  }
+  .heat5 {
+    fill: #dd1212;
   }
 }
 .map__image {
@@ -33,16 +38,19 @@
     color: rgb(0, 0, 0);
   }
   .incidence0 {
-    background-color: #d9d9d9;
+    background-color: #10d81a;
   }
   .incidence1 {
-    background-color: #ea9999;
+    background-color: #e7eb0f;
   }
   .incidence2 {
-    background-color: #c40000;
+    background-color: #19aedb;
   }
   .incidence3 {
-    background-color: #770404;
+    background-color: #ffae00;
+  }
+  .incidence4 {
+    background-color: #dd1212;
   }
 }
 

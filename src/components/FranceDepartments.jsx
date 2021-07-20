@@ -6,14 +6,20 @@ function FranceRegion({ dataCovid19 }) {
       const region = Object.keys(obj)[0];
       const incidence = Object.values(obj)[0];
       if (region === num) {
-        if (incidence < 15) {
+        if (incidence < 1) {
           return "heat1";
         }
-        if (incidence >= 15 && incidence <= 30) {
+        if (incidence < 5) {
           return "heat2";
         }
-        if (incidence >= 30) {
+        if (incidence < 10) {
           return "heat3";
+        }
+        if (incidence < 15) {
+          return "heat4";
+        }
+        if (incidence >= 15) {
+          return "heat%";
         }
       }
     }

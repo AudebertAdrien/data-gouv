@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 import FranceDepartment from "../components/FranceDepartments";
 import DateChange from "../components/Date";
 import { format } from "date-fns";
+import ModalPopup from "../boostrap-components/ModalPopup";
 // let newDateFormat = format(new Date(), `yyyy-dd-MM`);
 
 function Home() {
   const [dataCovid19, setDataCovid19] = useState([]);
-  /* WEBPACK_BASE_URL is a global variable created at compile time by webpack 
-  https://data-gouv-server.herokuapp.com/ or http://localhost:3000/
-  */
+  /* 
   let today = new Date();
-  /* let lastWeek = format(
+  let lastWeek = format(
     new Date(today.getFullYear(), today.getMonth(), today.getDate() - 8),
     `yyyy-MM-dd`
   ); */
+
   let lastWeek = format(new Date("2021", "06", "01"), `yyyy-MM-dd`);
 
   useEffect(() => {
@@ -36,27 +36,26 @@ function Home() {
       <div className="row">
         <FranceDepartment dataCovid19={dataCovid19} />
       </div>
-      <div className="row my-4">
-        <p className="text-center">
-          From <span className="lastWeekMessage">{lastWeek}</span> the map isn't
-          updated anymore !!!
-        </p>
-      </div>
+      <div className="row my-4"></div>
       <div className="row">
         <div className="col-sm-6 d-flex justify-content-center">
           <DateChange setDataCovid19={setDataCovid19} />
         </div>
+        <ModalPopup />
         <div className="col-sm-6">
           <ul className="list-group">
             <li className="list-group-item incidence0">Incidence close to 0</li>
             <li className="list-group-item incidence1">
-              Incidence less than 15%
+              Incidence less than 5%
             </li>
             <li className="list-group-item incidence2">
-              Incidence between 15% and 30%
+              Incidence less than 10%
             </li>
             <li className="list-group-item incidence3">
-              Incidence greater or equal to 30 %
+              Incidence less than 15%
+            </li>
+            <li className="list-group-item incidence4">
+              Incidence greater or equal to 15 %
             </li>
           </ul>
         </div>
