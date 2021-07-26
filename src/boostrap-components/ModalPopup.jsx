@@ -4,24 +4,23 @@ import { Modal } from "bootstrap";
 function ModalPopup() {
   const [modal, setModal] = useState(null);
   const exampleModal = useRef();
-  try {
-    console.log("!!!!!!!!!!!!");
-    console.log(modal);
-  } catch {
-    console.log("not find");
-  }
 
+  // temporary situation
+  /*   try {
+    console.log($);
+    modal.show();
+  } catch {
+    console.log("Couldn't launch modal.show() before componentDidMount");
+  }
+ */
   useEffect(() => {
     setModal(new Modal(exampleModal.current));
   }, []);
 
   return (
     <>
-      <button className="btn btn-secondary" onClick={() => modal.show()}>
-        Detail
-      </button>
       <div
-        className="modal"
+        className={`modal `}
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
         ref={exampleModal}
@@ -29,7 +28,7 @@ function ModalPopup() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Modal title</h5>
+              <h5 className="modal-title">Due to heroku free account</h5>
               <button
                 type="button"
                 className="btn-close"
@@ -38,18 +37,21 @@ function ModalPopup() {
               ></button>
             </div>
             <div className="modal-body">
-              <p>Modal body text goes here.</p>
+              <p>
+                1. The app has launched 30 seconds late and the server will be
+                launching in 30 seconds more. 2. For the same reason, the date
+                of the calendar can't be update everyday.
+              </p>
+              <p>Be patient. Thank you very much</p>
             </div>
             <div className="modal-footer">
               <button
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
+                onClick={() => modal.hide()}
               >
                 Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
               </button>
             </div>
           </div>
