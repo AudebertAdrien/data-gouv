@@ -19,7 +19,7 @@ function FranceRegion({ dataCovid19 }) {
           return "heat4";
         }
         if (incidence >= 15) {
-          return "heat%";
+          return "heat5";
         }
       }
     }

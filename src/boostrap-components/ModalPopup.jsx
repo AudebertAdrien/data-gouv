@@ -5,14 +5,12 @@ function ModalPopup() {
   const [modal, setModal] = useState(null);
   const exampleModal = useRef();
 
-  // temporary situation
-  /*   try {
-    console.log($);
+  /* try {
     modal.show();
   } catch {
-    console.log("Couldn't launch modal.show() before componentDidMount");
-  }
- */
+    console.log("toto");
+  } */
+
   useEffect(() => {
     setModal(new Modal(exampleModal.current));
   }, []);
@@ -20,7 +18,7 @@ function ModalPopup() {
   return (
     <>
       <div
-        className={`modal `}
+        className={`modal`}
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
         ref={exampleModal}
@@ -34,6 +32,7 @@ function ModalPopup() {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={() => modal.hide()}
               ></button>
             </div>
             <div className="modal-body">
