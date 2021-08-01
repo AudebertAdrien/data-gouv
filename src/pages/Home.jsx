@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import FranceDepartment from "../components/FranceDepartments";
 import DateChange from "../components/Date";
 import { format } from "date-fns";
-import ModalPopup from "../boostrap-components/ModalPopup";
 // let newDateFormat = format(new Date(), `yyyy-dd-MM`);
 
 function Home() {
@@ -33,6 +32,13 @@ function Home() {
 
   return (
     <div className="container">
+      <div class="alert alert-warning" role="alert">
+        Due to the <strong>free server account version</strong>, there are some
+        delay, be patient.
+        <br />
+        And for the same reason the calendar is not update anymore.
+      </div>
+
       <div className="row">
         <FranceDepartment dataCovid19={dataCovid19} />
       </div>
@@ -41,7 +47,7 @@ function Home() {
         <div className="col-sm-6 d-flex justify-content-center">
           <DateChange setDataCovid19={setDataCovid19} />
         </div>
-        <ModalPopup />
+
         <div className="col-sm-6">
           <ul className="list-group">
             <li className="list-group-item incidence0">Incidence close to 0</li>
