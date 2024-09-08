@@ -1,9 +1,9 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-import FranceDepartment from "../components/FranceDepartments";
-import DateChange from "../components/Date";
-import { format } from "date-fns";
+import FranceDepartment from '../components/FranceDepartments';
+import DateChange from '../components/Date';
+import { format } from 'date-fns';
 // let newDateFormat = format(new Date(), `yyyy-dd-MM`);
 
 function Home() {
@@ -15,12 +15,12 @@ function Home() {
     `yyyy-MM-dd`
   ); */
 
-  let lastWeek = format(new Date("2021", "06", "01"), `yyyy-MM-dd`);
+  let lastWeek = format(new Date('2021', '06', '01'), `yyyy-MM-dd`);
 
   useEffect(() => {
     axios
       .post(WEBPACK_BASE_URL, lastWeek, {
-        headers: { "content-type": "text/plain; charset=UTF-8" },
+        headers: { 'content-type': 'text/plain; charset=UTF-8' },
       })
       .then((res) => {
         setDataCovid19(res.data);
